@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portal Review Villa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .stars {
+      color: #fbbf24; /* Tailwind yellow-400 */
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <header class="bg-blue-600 text-white p-4 text-center">
+    <h1 class="text-3xl font-bold">Portal Review Villa</h1>
+  </header>
+
+  <main class="container mx-auto mt-6 p-4">
+    <h2 class="text-2xl font-semibold mb-4">Ulasan Tamu</h2>
+    <div id="reviews" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Reviews akan diisi di sini melalui script.js -->
+    </div>
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center p-4">
+    © 2024 Portal Review Villa
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+  const reviews = [
+    {
+      stars: 5,
+      comment: "Fasilitas yang lengkap, termasuk kolam renang pribadi, kamar tidur yang nyaman, dan ruang tamu yang luas, memberikan kenyamanan maksimal selama menginap"
+    },
+    {
+      stars: 4,
+      comment: "Dengan adanya kolam renang, dapur lengkap, kamar mandi mewah, serta ruang hiburan, villa ini menawarkan kenyamanan dan kemewahan secara menyeluruh"
+    },
+    {
+      stars: 4,
+      comment: "Lokasi yang seimbang antara privasi dan kemudahan akses ke area sekitar membuatnya ideal untuk liburan"
+    }
+  ];
+
+  const reviewsContainer = document.getElementById("reviews");
+
+  reviews.forEach(review => {
+    const starsHtml = "★".repeat(review.stars) + "☆".repeat(5 - review.stars);
+
+    const reviewCard = `
+      <div class="bg-white p-6 rounded-lg shadow-md">
+        <div class="stars text-xl mb-2">${starsHtml}</div>
+        <hr class="my-2">
+        <p class="text-gray-700 mt-4"><strong>Komentar</strong></p>
+        <p class="italic">"${review.comment}"</p>
+      </div>
+    `;
+    reviewsContainer.innerHTML += reviewCard;
+  });
+});
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <title>Stay GAPPH VILLA</title>
+        <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="stay.css">
+    </head>
+    <body>
+ <!-- Navbar -->
+ <header class="fixed z-[100] top-0 left-0 w-full bg-[#DDD0C0] bg-opacity-60 shadow-md z-50 backdrop-filter backdrop-blur-sm font-['Lusitana']">
+    <div class="container mx-auto flex justify-between items-center px-4 lg:px-8 py-3">
+     <a href="index.html" class="hover:opacity-80">
+         <img src="logo1.png" alt="Logo" class="w-24">
+       </a>
+                  <ul class="hidden md:flex gap-20 text-[#574A21] font-medium relative">
+            <li class="group relative">
+            <a class="hover:text-[#9C7701]" href="#stay">STAY</a>
+            <li><a class="hover:text-[#9C7701]" href="about.html">ABOUT</a></li>
+        </ul>
+        <button class="hidden md:block bg-[#FEF8F8] text-[#574A21] hover:bg-black hover:text-white px-6 py-2 rounded-full">
+            BOOK NOW
+        </button>   
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-[#574A21]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden flex-col items-center bg-[#DDD0C0] text-[#574A21] text-lg font-medium md:hidden font-['Lusitana']">
+        <a class="py-2 w-full text-center hover:bg-[#D9A400]" href="index.html">HOME</a>
+        <div class="w-full relative">
+            <button id="dropdown-toggle" href="#stay" class="py-2 w-full text-center hover:bg-[#D9A400]">STAY</button>
+        </div>
+        <a class="py-2 w-full text-center hover:bg-[#9C7701]" href="#about">ABOUT</a>
+    </div>
+</header>
+
+<!--villa-->
+<section id="stay" class="relative">
+        <div class="carousel">
+            <div class="list">
+                <div class="item" style="background-image: url(https://asset.kompas.com/crops/5IVeE9MjpfvHfkC4ICmd1ySeP94=/125x63:875x563/1200x800/data/photo/2023/02/26/63fb51e0c37d2.jpg);">
+                    <div class="content">
+                        <div class="title">THE RUSSI</div>
+                        <div class="name">VILLA</div>
+                        <div class="btn">
+                            <button class="px-4 py-2 text-white rounded  transition no-underline">
+                                <a href="russi.html">See More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url(http://pix3.agoda.net/hotelimages/680592/0/900ae1a932aaa7ee3c6b861111994a2e.jpg);">
+                    <div class="content">
+                        <div class="title">VILLA</div>
+                        <div class="name">SENERITAS</div>
+                        <div class="btn">
+                            <button class="px-4 py-2 text-white rounded  transition no-underline">
+                                <a href="serenitas.html">See More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item" style="background-image: url('https://www.villadibali.net/villa-images/photo/villa-mewah-pemandangan-sawah-canggu_big.jpg');">
+                    <div class="content">
+                        <div class="title">VILLA</div>
+                        <div class="name">PANORAMIK</div>
+                        <div class="btn">
+                            <button class="px-4 py-2 text-white rounded  transition no-underline">
+                                <a href="panoramik.html">See More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item" style="background-image: url(https://www.villadibali.net/villa-images/photo/villa-6-kamar-tidur-mewah-nyaman-hanya-500-meter-pantai_big.jpg);">
+                    <div class="content">
+                        <div class="title">THE</div>
+                        <div class="name">VILLA's</div>
+                        <div class="btn">
+                            <button class="px-4 py-2 text-white rounded  transition no-underline">
+                                <a href="The Villa's.html">See More</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="arrows">
+                <button class="prev"> <i class="fa-solid fa-chevron-left"></i></button>
+                <button class="next"> <i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div class="timeRunning"></div>
+        </div>
+    </section>
+        <script src="stay.js">
+            document.getElementById('menu-toggle').addEventListener('click', function() {
+                var mobileMenu = document.getElementById('mobile-menu');
+                mobileMenu.classList.toggle('hidden');
+            });
+        
+            document.getElementById('dropdown-toggle').addEventListener('click', function() {
+                var dropdownMenu = document.getElementById('dropdown-menu');
+                dropdownMenu.classList.toggle('hidden');
+            });
+        </script>
+    </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAPPH VILLA</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-[#EDE7E0]">
+
+ <!-- Navbar -->
+ <header class="fixed top-0 left-0 w-full bg-[#DDD0C0] bg-opacity-60 shadow-md z-50 backdrop-filter backdrop-blur-sm font-['Lusitana']">
+    <div class="container mx-auto flex justify-between items-center px-4 lg:px-8 py-3">
+        <img src="logo1.png" alt="Logo" class="w-24">
+        <ul class="hidden md:flex gap-20 text-[#574A21] font-medium relative">
+          <a class="py-2 w-full text-center hover:bg-[#D9A400]" href="#home">HOME</a>
+        <div class="w-full relative">
+        </div>
+        <a class="py-2 w-full text-center hover:bg-[#9C7701]" href="#explore">EXPLORE</a>
+        </ul>
+        <button class="hidden md:block bg-[#FEF8F8] text-[#574A21] hover:bg-black hover:text-white px-6 py-2 rounded-full">
+            BOOK NOW
+        </button>
+        <div class="md:hidden">
+            <button id="menu-toggle" class="text-[#574A21]">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden flex-col items-center bg-[#DDD0C0] text-[#574A21] text-lg font-medium md:hidden font-['Lusitana']">
+        <a class="py-2 w-full text-center hover:bg-[#D9A400]" href="#home">HOME</a>
+        <div class="w-full relative">
+        </div>
+        <a class="py-2 w-full text-center hover:bg-[#9C7701]" href="#contact">CONTACT US</a>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section id="home" class="relative">
+    <div class="absolute inset-0 bg-black opacity-50 transition-opacity duration-1000"></div> <!-- Overlay Gelap -->
+    <img 
+      src="https://www.villa-bali.com/guide/wp-content/uploads/2023/07/villa-castil-di-udara-castil-di-udara-pool-day-2-615a6eda00490.jpg" alt="Gapph Villa" class="w-full h-auto object-cover opacity-0 transition-opacity duration-1000" id="hero-image">
+  </section>
+        
+<!-- Welcome Section -->
+<section id="explore" class="relative text-center py-16 px-4 bg-[#EDE7E0]">  
+    <div class="relative z-10 max-w-3xl mx-auto animate-fade-in">
+      <h1 class="text-3xl sm:text-5xl font-bold text-[#574A21] mb-4 font-['Orelega'] drop-shadow-lg">
+        Welcome to <span class="text-[#8b6f3d] font-['Orelega One']">‘GAPPH VILLA’</span>
+      </h1>
+        <p class="text-lg sm:text-xl text-[#574A21] font-['Lusitana'] leading-relaxed">
+        Discover a hidden paradise designed to provide a special experience. GAPPH offers 
+        the perfect combination of modern comfort, natural beauty, and classy service.
+      </p>
+    </div>
+      <div class="relative z-10 mt-8 flex justify-center items-center">
+      <div class="h-[2px] w-24 bg-[#574A21]"></div>
+      <span class="mx-4 text-[#574A21] text-sm font-semibold font-['Orelega']">OR</span>
+      <div class="h-[2px] w-24 bg-[#574A21]"></div>
+    </div>
+      <div class="mt-12">
+      <a href="about.html" class="relative inline-block px-8 py-3 text-white font-semibold rounded-lg bg-[#8b6f3d] hover:bg-[#574A21] transition-all duration-300 shadow-md hover:shadow-lg font-['Orelega']">
+        Explore Now
+      </a>
+    </div>
+  </section>
+    
+<script src="script.js"></script>
+</body>
+</html>
